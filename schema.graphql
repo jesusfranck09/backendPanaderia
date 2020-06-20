@@ -1,0 +1,33 @@
+type Query {
+getPanes(data:[String]!):[Pan]
+getVentas(data:[String]!):[Ventas]
+}
+
+type Mutation {
+insertPanes(data:[String]!):[Pan]
+login(data:[String]!):User
+ventas(data:[String]!):Ventas
+signup(data:[String]!):Ventas
+}
+
+type Ventas {
+    message:String
+    id:String,
+    producto:String,
+    Cantidad:String,
+    Total:String
+
+}
+
+type Pan {
+message:String
+producto:String
+}
+
+type User {
+    id:String
+    nombre:String,
+    apellidoP:String,
+    apellidoM:String,
+    message:String
+}
